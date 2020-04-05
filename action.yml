@@ -1,0 +1,5 @@
+name: 'Seshat ktlint'
+description: 'Seshat'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
