@@ -7,9 +7,9 @@ cd "${GITHUB_WORKSPACE}"
 
 diff_file=$(mktemp)
 
-git show -s --format=%B
+git show -s --pretty=format:%B
 
-sha=$((git show -s --format=%B | sed -n -E 's/^Merge ([0-9abcdef]{40}) into [0-9abcedef]{40}$/\1/; t; q1' || echo ${GITHUB_SHA}) | tail -n1)
+sha=$((git show -s --pretty=format:%B | sed -n -E 's/^Merge ([0-9abcdef]{40}) into [0-9abcedef]{40}$/\1/; t; q1' || echo ${GITHUB_SHA}) | tail -n1)
 
 echo ${sha}
 echo ${sha}
