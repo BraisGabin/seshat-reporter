@@ -13,6 +13,6 @@ sha=$((git show -s --pretty=format:%B | sed -E 's/^Merge ([0-9abcdef]{40}) into 
 pull_number=$(jq --raw-output .pull_request.number "${GITHUB_EVENT_PATH}")
 
 curl --data-binary "@${diff_file}" \
-  -H "Content-Type: text/plain" \
-  -X POST \
-  "https://seshat-style.herokuapp.com/github/${GITHUB_REPOSITORY}/pulls/${pull_number}/${sha}"
+	-H "Content-Type: text/plain" \
+	-X POST \
+	"https://seshat-style.herokuapp.com/github/${GITHUB_REPOSITORY}/pulls/${pull_number}/${sha}"
