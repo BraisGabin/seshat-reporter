@@ -1,5 +1,10 @@
 name: 'Seshat ktlint'
 description: 'Seshat'
+
 runs:
   using: 'docker'
   image: 'Dockerfile'
+
+branding:
+  icon: 'type'
+  color: 'yellow'
